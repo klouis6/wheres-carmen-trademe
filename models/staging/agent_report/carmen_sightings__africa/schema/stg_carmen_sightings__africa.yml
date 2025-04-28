@@ -1,0 +1,57 @@
+version: 2
+models:
+- name: carmen_sightings__africa
+  description: Interpol agents regional report of Carmen Sandiego for Africa region
+  columns:
+  - name: date_witness
+    description: Date of witness sighting
+    tests:
+    - not_null
+  - name: witness
+    description: Name of witness sighting the perpetrator
+    tests:
+    - not_null
+  - name: agent
+    description: Name of field agent filing the report
+    tests:
+    - not_null
+  - name: date_agent
+    description: Date of field agent filing the report
+    tests:
+    - not_null
+  - name: city_agent
+    description: HQ city where field agent files the report
+    tests:
+    - not_null
+  - name: country
+    description: Country of sighting
+    tests:
+    - not_null
+  - name: city
+    description: City of sighting
+    tests:
+    - not_null
+  - name: latitude
+    description: Latitude of sighting
+    tests:
+    - not_null
+  - name: longitude
+    description: Longitude of sighting
+    tests:
+    - not_null
+  - name: has_weapon
+    description: Was the perpetrator observed to be armed?
+    tests:
+    - not_null
+  - name: has_hat
+    description: Was the perpetrator wearing a hat?
+    tests:
+    - not_null
+  - name: has_jacket
+    description: Was the perpetrator wearing a jacket?
+    tests:
+    - not_null
+  - name: behavior
+    description: Short description of perpetrator behavior
+    tests:
+    - not_null
