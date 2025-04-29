@@ -1,26 +1,42 @@
 with stg_carmen_sightings__africa as (
-    select * from {{ ref('stg_carmen_sightings__africa') }}
+    select *
+        , 'Africa' as region
+    from {{ ref('stg_carmen_sightings__africa') }}
 ),
 stg_carmen_sightings__america as (
-    select * from {{ ref('stg_carmen_sightings__america') }}
+    select * 
+        , 'America' as region
+    from {{ ref('stg_carmen_sightings__america') }}
 ),
 stg_carmen_sightings__asia as (
-    select * from {{ ref('stg_carmen_sightings__asia') }}
+    select * 
+        , 'Asia' as region 
+    from {{ ref('stg_carmen_sightings__asia') }}
 ),
 stg_carmen_sightings__atlantic as (
-    select * from {{ ref('stg_carmen_sightings__atlantic') }}
+    select * 
+        , 'Atlantic' as region
+    from {{ ref('stg_carmen_sightings__atlantic') }}
 ),
 stg_carmen_sightings__australia as (
-    select * from {{ ref('stg_carmen_sightings__australia') }}
+    select * 
+        , 'Australia' as region
+    from {{ ref('stg_carmen_sightings__australia') }}
 ),
 stg_carmen_sightings__europe as (
-    select * from {{ ref('stg_carmen_sightings__europe') }}
+    select * 
+        , 'Europe' as region
+    from {{ ref('stg_carmen_sightings__europe') }}
 ),
 stg_carmen_sightings__indian as (
-    select * from {{ ref('stg_carmen_sightings__indian') }}
+    select * 
+        , 'Indian' as region
+    from {{ ref('stg_carmen_sightings__indian') }}
 ),
 stg_carmen_sightings__pacific as (
-    select * from {{ ref('stg_carmen_sightings__pacific') }}
+    select * 
+        , 'Pacific' as region
+    from {{ ref('stg_carmen_sightings__pacific') }}
 )
 
 select * from stg_carmen_sightings__africa
