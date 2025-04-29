@@ -34,6 +34,12 @@ models:
       +materialized: view
       +schema: src
 
+    intermediate:
+      +tags: "intermediate"
+      +database: "WHERES_CARMEN_DB"
+      +materialized: table
+      +schema: int
+
     marts:
       dims:
         +tags: "dims"
@@ -55,8 +61,8 @@ models:
         +materialized: view
         +schema: mart
 
-    intermediate:
-      +tags: "intermediate"
-      +database: "WHERES_CARMEN_DB"
-      +materialized: table
-      +schema: int
+seeds:
+  +tags: "seeds"
+  +database: "WHERES_CARMEN_DB"
+  +materialized: seed
+  +schema: seed
