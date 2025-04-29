@@ -1,0 +1,1 @@
+{{ get_carmen_sightings('cs_indian', 'seed_carmen_sightings__indian') }}

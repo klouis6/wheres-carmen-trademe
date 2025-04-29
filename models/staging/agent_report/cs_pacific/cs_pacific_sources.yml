@@ -1,0 +1,8 @@
+version: 2
+sources:
+- name: cs_pacific
+  database: wheres_carmen_db
+  schema: dbt_tmariono_seed
+  tables:
+    - name: seed_carmen_sightings__pacific
+      description: Raw Interpol agents regional report of Carmen Sandiego for Pacific region

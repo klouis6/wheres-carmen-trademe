@@ -1,0 +1,361 @@
+version: 2
+seeds:
+  - name: seed_carmen_sightings__africa
+    description: Populate this seed with the parameters used in the dbt_project.yml file for Africa Region
+    config:
+      column_types:
+        date_witness: date
+        witness: string
+        agent: string
+        date_agent: date
+        city_agent: string
+        country_code: string
+        city: string
+        latitude: float
+        longitude: float
+        has_weapon: boolean
+        has_hat: boolean
+        has_jacket: boolean
+        behavior: string
+    columns:
+      - name: date_witness
+        description: Date of witness sighting
+      - name: witness
+        description: Name of witness sighting the perpetrator
+      - name: agent
+        description: Name of field agent filing the report
+      - name: date_agent
+        description: Date of field agent filing the report
+      - name: city_agent
+        description: HQ city where field agent files the report
+      - name: country_code
+        description: Country of sighting
+      - name: city
+        description: City of sighting
+      - name: latitude
+        description: Latitude of sighting
+      - name: longitude
+        description: Longitude of sighting
+      - name: has_weapon
+        description: Was the perpetrator observed to be armed?
+      - name: has_hat
+        description: Was the perpetrator wearing a hat?
+      - name: has_jacket
+        description: Was the perpetrator wearing a jacket?
+      - name: behavior
+        description: Short description of perpetrator behavior
+
+  - name: seed_carmen_sightings__america
+    description: Populate this seed with the parameters used in the dbt_project.yml file for America Region
+    config:
+      column_types:
+        date_witness: date
+        witness: string
+        agent: string
+        date_agent: date
+        city_agent: string
+        country: string
+        city: string
+        latitude: float
+        longitude: float
+        has_weapon: boolean
+        has_hat: boolean
+        has_jacket: boolean
+        behavior: string
+    columns:
+      - name: date_witness
+        description: Date of witness sighting
+      - name: witness
+        description: Name of witness sighting the perpetrator
+      - name: agent
+        description: Name of field agent filing the report
+      - name: date_agent
+        description: Date of field agent filing the report
+      - name: city_agent
+        description: HQ city where field agent files the report
+      - name: country_code
+        description: Country of sighting
+      - name: city
+        description: City of sighting
+      - name: latitude
+        description: Latitude of sighting
+      - name: longitude
+        description: Longitude of sighting
+      - name: has_weapon
+        description: Was the perpetrator observed to be armed?
+      - name: has_hat
+        description: Was the perpetrator wearing a hat?
+      - name: has_jacket
+        description: Was the perpetrator wearing a jacket?
+      - name: behavior
+        description: Short description of perpetrator behavior
+
+  - name: seed_carmen_sightings__asia
+    description: Populate this seed with the parameters used in the dbt_project.yml file for Asia Region
+    config:
+      column_types:
+        date_witness: date
+        witness: string
+        agent: string
+        date_agent: date
+        city_agent: string
+        country: string
+        city: string
+        latitude: float
+        longitude: float
+        has_weapon: boolean
+        has_hat: boolean
+        has_jacket: boolean
+        behavior: string
+    columns:
+      - name: date_witness
+        description: Date of witness sighting
+      - name: witness
+        description: Name of witness sighting the perpetrator
+      - name: agent
+        description: Name of field agent filing the report
+      - name: date_agent
+        description: Date of field agent filing the report
+      - name: city_agent
+        description: HQ city where field agent files the report
+      - name: country_code
+        description: Country of sighting
+      - name: city
+        description: City of sighting
+      - name: latitude
+        description: Latitude of sighting
+      - name: longitude
+        description: Longitude of sighting
+      - name: has_weapon
+        description: Was the perpetrator observed to be armed?
+      - name: has_hat
+        description: Was the perpetrator wearing a hat?
+      - name: has_jacket
+        description: Was the perpetrator wearing a jacket?
+      - name: behavior
+        description: Short description of perpetrator behavior
+
+  - name: seed_carmen_sightings__atlantic
+    description: Populate this seed with the parameters used in the dbt_project.yml file for Atlantic Region
+    config:
+      column_types:
+        date_witness: date
+        witness: string
+        agent: string
+        date_agent: date
+        city_agent: string
+        country: string
+        city: string
+        latitude: float
+        longitude: float
+        has_weapon: boolean
+        has_hat: boolean
+        has_jacket: boolean
+        behavior: string
+    columns:
+      - name: date_witness
+        description: Date of witness sighting
+      - name: witness
+        description: Name of witness sighting the perpetrator
+      - name: agent
+        description: Name of field agent filing the report
+      - name: date_agent
+        description: Date of field agent filing the report
+      - name: city_agent
+        description: HQ city where field agent files the report
+      - name: country_code
+        description: Country of sighting
+      - name: city
+        description: City of sighting
+      - name: latitude
+        description: Latitude of sighting
+      - name: longitude
+        description: Longitude of sighting
+      - name: has_weapon
+        description: Was the perpetrator observed to be armed?
+      - name: has_hat
+        description: Was the perpetrator wearing a hat?
+      - name: has_jacket
+        description: Was the perpetrator wearing a jacket?
+      - name: behavior
+        description: Short description of perpetrator behavior
+
+  - name: seed_carmen_sightings__australia
+    description: Populate this seed with the parameters used in the dbt_project.yml file for Australia Region
+    config:
+      column_types:
+        date_witness: date
+        witness: string
+        agent: string
+        date_agent: date
+        city_agent: string
+        country: string
+        city: string
+        latitude: float
+        longitude: float
+        has_weapon: boolean
+        has_hat: boolean
+        has_jacket: boolean
+        behavior: string
+    columns:
+      - name: date_witness
+        description: Date of witness sighting
+      - name: witness
+        description: Name of witness sighting the perpetrator
+      - name: agent
+        description: Name of field agent filing the report
+      - name: date_agent
+        description: Date of field agent filing the report
+      - name: city_agent
+        description: HQ city where field agent files the report
+      - name: country_code
+        description: Country of sighting
+      - name: city
+        description: City of sighting
+      - name: latitude
+        description: Latitude of sighting
+      - name: longitude
+        description: Longitude of sighting
+      - name: has_weapon
+        description: Was the perpetrator observed to be armed?
+      - name: has_hat
+        description: Was the perpetrator wearing a hat?
+      - name: has_jacket
+        description: Was the perpetrator wearing a jacket?
+      - name: behavior
+        description: Short description of perpetrator behavior
+
+  - name: seed_carmen_sightings__europe
+    description: Populate this seed with the parameters used in the dbt_project.yml file for Europe Region
+    config:
+      column_types:
+        date_witness: date
+        witness: string
+        agent: string
+        date_agent: date
+        city_agent: string
+        country: string
+        city: string
+        latitude: float
+        longitude: float
+        has_weapon: boolean
+        has_hat: boolean
+        has_jacket: boolean
+        behavior: string
+    columns:
+      - name: date_witness
+        description: Date of witness sighting
+      - name: witness
+        description: Name of witness sighting the perpetrator
+      - name: agent
+        description: Name of field agent filing the report
+      - name: date_agent
+        description: Date of field agent filing the report
+      - name: city_agent
+        description: HQ city where field agent files the report
+      - name: country_code
+        description: Country of sighting
+      - name: city
+        description: City of sighting
+      - name: latitude
+        description: Latitude of sighting
+      - name: longitude
+        description: Longitude of sighting
+      - name: has_weapon
+        description: Was the perpetrator observed to be armed?
+      - name: has_hat
+        description: Was the perpetrator wearing a hat?
+      - name: has_jacket
+        description: Was the perpetrator wearing a jacket?
+      - name: behavior
+        description: Short description of perpetrator behavior
+
+  - name: seed_carmen_sightings__indian
+    description: Populate this seed with the parameters used in the dbt_project.yml file for Indian Region
+    config:
+      column_types:
+        date_witness: date
+        witness: string
+        agent: string
+        date_agent: date
+        city_agent: string
+        country: string
+        city: string
+        latitude: float
+        longitude: float
+        has_weapon: boolean
+        has_hat: boolean
+        has_jacket: boolean
+        behavior: string
+    columns:
+      - name: date_witness
+        description: Date of witness sighting
+      - name: witness
+        description: Name of witness sighting the perpetrator
+      - name: agent
+        description: Name of field agent filing the report
+      - name: date_agent
+        description: Date of field agent filing the report
+      - name: city_agent
+        description: HQ city where field agent files the report
+      - name: country_code
+        description: Country of sighting
+      - name: city
+        description: City of sighting
+      - name: latitude
+        description: Latitude of sighting
+      - name: longitude
+        description: Longitude of sighting
+      - name: has_weapon
+        description: Was the perpetrator observed to be armed?
+      - name: has_hat
+        description: Was the perpetrator wearing a hat?
+      - name: has_jacket
+        description: Was the perpetrator wearing a jacket?
+      - name: behavior
+        description: Short description of perpetrator behavior
+
+  - name: seed_carmen_sightings__pacific
+    description: Populate this seed with the parameters used in the dbt_project.yml file for Pacific Region
+    config:
+      column_types:
+        date_witness: date
+        witness: string
+        agent: string
+        date_agent: date
+        city_agent: string
+        country: string
+        city: string
+        latitude: float
+        longitude: float
+        has_weapon: boolean
+        has_hat: boolean
+        has_jacket: boolean
+        behavior: string
+    columns:
+      - name: date_witness
+        description: Date of witness sighting
+      - name: witness
+        description: Name of witness sighting the perpetrator
+      - name: agent
+        description: Name of field agent filing the report
+      - name: date_agent
+        description: Date of field agent filing the report
+      - name: city_agent
+        description: HQ city where field agent files the report
+      - name: country_code
+        description: Country of sighting
+      - name: city
+        description: City of sighting
+      - name: latitude
+        description: Latitude of sighting
+      - name: longitude
+        description: Longitude of sighting
+      - name: has_weapon
+        description: Was the perpetrator observed to be armed?
+      - name: has_hat
+        description: Was the perpetrator wearing a hat?
+      - name: has_jacket
+        description: Was the perpetrator wearing a jacket?
+      - name: behavior
+        description: Short description of perpetrator behavior

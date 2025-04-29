@@ -1,8 +1,0 @@
-version: 2
-sources:
-- name: carmen_sightings
-  database: wheres_carmen_db
-  schema: agent_report
-  tables:
-    - name: carmen_sightings__europe
-      description: Interpol agents regional report of Carmen Sandiego for Europe region
