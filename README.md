@@ -13,8 +13,8 @@ This document provides an overview of the dbt models used to analyze sightings d
 
 ---
 
-# dbt DAG - Final
-<img width="2099" alt="Screenshot 2025-04-30 at 23 21 57" src="https://github.com/user-attachments/assets/bc937880-0707-4946-8065-1505c4c19add" />
+# dbt DAG
+<img width="2452" alt="Screenshot 2025-05-01 at 01 13 43" src="https://github.com/user-attachments/assets/0c41f6c1-e278-4859-86de-c0e4986d8b7e" />
 
 ---
 
