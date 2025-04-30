@@ -1,0 +1,22 @@
+version: 2
+sources:
+- name: carmen_sighting
+  database: wheres_carmen_db
+  schema: dbt_tmariono_seed
+  tables:
+    - name: seed_carmen_sightings__africa
+      description: Raw Interpol agents regional report of Carmen Sandiego for Africa region
+    - name: seed_carmen_sightings__america
+      description: Raw Interpol agents regional report of Carmen Sandiego for America region
+    - name: seed_carmen_sightings__asia
+      description: Raw Interpol agents regional report of Carmen Sandiego for Asia region
+    - name: seed_carmen_sightings__atlantic
+      description: Raw Interpol agents regional report of Carmen Sandiego for Atlantic region
+    - name: seed_carmen_sightings__australia
+      description: Raw Interpol agents regional report of Carmen Sandiego for Australia region
+    - name: seed_carmen_sightings__europe
+      description: Raw Interpol agents regional report of Carmen Sandiego for Europe region
+    - name: seed_carmen_sightings__indian
+      description: Raw Interpol agents regional report of Carmen Sandiego for Indian region
+    - name: seed_carmen_sightings__pacific
+      description: Raw Interpol agents regional report of Carmen Sandiego for Pacific region

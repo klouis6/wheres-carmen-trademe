@@ -1,1 +1,1 @@
-{{ get_carmen_sightings('cs_atlantic', 'seed_carmen_sightings__atlantic') }}
+{{ get_carmen_sightings('carmen_sighting', 'seed_carmen_sightings__atlantic') }}

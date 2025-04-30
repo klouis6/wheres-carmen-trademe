@@ -18,8 +18,6 @@ models:
         description: The month for the probability calculation
       - name: probability_armed_jacket_no_hat
         description: The probability that Carmen is armed, wearing a jacket, but not wearing a hat
-      - name: perc_probability_armed_jacket_no_hat
-        description: The percentage equivalent of the probability
 
   - name: top_3_behaviors
     description: The three most frequent behaviors observed in Carmen's sightings
@@ -38,5 +36,3 @@ models:
         description: The month of the behavior probability
       - name: probability_top3_behaviors
         description: The probability that Carmen exhibits one of her top 3 behaviors
-      - name: perc_probability_top3_behaviors
-        description: The percentage equivalent of the top 3 behavior probability

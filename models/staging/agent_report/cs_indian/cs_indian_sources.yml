@@ -1,8 +1,0 @@
-version: 2
-sources:
-- name: cs_indian
-  database: wheres_carmen_db
-  schema: dbt_tmariono_seed
-  tables:
-    - name: seed_carmen_sightings__indian
-      description: Raw Interpol agents regional report of Carmen Sandiego for Indian region

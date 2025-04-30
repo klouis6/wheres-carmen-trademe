@@ -4,7 +4,7 @@ with stg_carmen_sightings__combined as (
 )
 
 select
-     {{ dbt_utils.generate_surrogate_key(['agent', 'city_agent', 'region']) }} as agent_id,
+    {{ dbt_utils.generate_surrogate_key(['agent', 'city_agent', 'region']) }} as agent_id,
     agent,
     city_agent,
     region
