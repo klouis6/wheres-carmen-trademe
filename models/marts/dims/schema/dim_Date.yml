@@ -4,10 +4,6 @@ models:
     description: Information regarding date of the year
 
     columns:
-      - name: date_day_id
-        description: ID of unique date
-        data_type: INT
-
       - name: date_day
         description: Date of the year
         data_type: DATE

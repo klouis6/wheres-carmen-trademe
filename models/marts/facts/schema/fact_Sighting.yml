@@ -12,9 +12,9 @@ models:
         description: ID for field agent
         data_type: VARCHAR
         
-      - name: date_agent_id
-        description: ID for date of field agent files the report
-        data_type: VARCHAR
+      - name: date_agent
+        description: Date of field agent filing the report
+        data_type: DATE
 
       - name: location_id
         description: ID for location
@@ -24,9 +24,9 @@ models:
         description: ID for witness sighting
         data_type: VARCHAR
 
-      - name: date_witness_id
-        description: ID for date of witness sighting
-        data_type: VARCHAR
+      - name: date_witness
+        description: Date of witness sighting
+        data_type: DATE
 
       - name: behavior_id
         description: ID of unique behavior

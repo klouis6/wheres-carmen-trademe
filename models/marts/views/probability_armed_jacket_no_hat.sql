@@ -10,6 +10,6 @@ select
     ) as perc_probability_armed_jacket_no_hat
 from {{ ref('fact_Sighting') }} fs
 left join {{ ref('dim_Date') }} dd
-    on fs.date_witness_id = dd.date_day_id
+    on fs.date_witness = dd.date_day
 group by dd.month
 order by dd.month

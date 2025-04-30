@@ -15,7 +15,7 @@ select
     ) as perc_probability_top3_behaviors
 from {{ ref('fact_Sighting') }} fs
 left join {{ ref('dim_Date') }} dd
-    on fs.date_witness_id = dd.date_day_id
+    on fs.date_witness = dd.date_day
 left join top_behavior tb
     on fs.behavior_id = tb.behavior_id
 group by dd.month

@@ -17,8 +17,7 @@ WITH base AS (
 ),
 
 date_dim AS (
-    SELECT date_day_id,
-        date_day,
+    SELECT date_day,
         year,
         month,
         day
@@ -57,10 +56,10 @@ location_dim AS (
 SELECT
     ROW_NUMBER() OVER (ORDER BY base.date_witness ASC) AS sighting_id,
     agent.agent_id,
-    da.date_day_id AS date_agent_id,
+    da.date_day AS date_agent,
     loc.location_id,
     wit.witness_id,
-    dw.date_day_id AS date_witness_id,
+    dw.date_day AS date_witness,
     beh.behavior_id,
     base.has_weapon,
     base.has_hat,
@@ -72,6 +71,6 @@ LEFT JOIN behavior_dim beh ON base.behavior = beh.behavior
 LEFT JOIN location_dim loc 
     ON base.latitude = loc.latitude
     AND base.longitude = loc.longitude
-LEFT JOIN date_dim dw ON TO_CHAR(base.date_witness, 'YYYYMMDD') = dw.date_day_id
-LEFT JOIN date_dim da ON TO_CHAR(base.date_agent, 'YYYYMMDD') = da.date_day_id
+LEFT JOIN date_dim dw ON base.date_witness = dw.date_day
+LEFT JOIN date_dim da ON base.date_agent = da.date_day
 ORDER BY sighting_id

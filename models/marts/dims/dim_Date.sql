@@ -3,7 +3,6 @@ with raw_generated_data as (
 )
 
 select 
-    TO_CHAR(date_day, 'YYYYMMDD') as date_day_id,
     date_day,
     year_number as year,
     month_of_year as month,

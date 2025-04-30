@@ -4,7 +4,7 @@ select
     count(*) as no_of_sightings
 from {{ ref('fact_Sighting') }} as fs
 left join {{ ref('dim_Date') }} as dd
-    on fs.date_witness_id = dd.date_day_id
+    on fs.date_witness = dd.date_day
 left join {{ ref('dim_Agent') }} as da
     on fs.agent_id = da.agent_id
 group by dd.month, da.region
