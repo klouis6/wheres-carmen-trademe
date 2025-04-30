@@ -5,7 +5,7 @@ models:
 
     columns:
       - name: location_id
-        description: ID for location
+        description: ID for unique location
         data_type: VARCHAR
         
       - name: country

@@ -5,7 +5,7 @@ models:
 
     columns:
       - name: agent_id
-        description: ID for field agent
+        description: ID for unique field agent
         data_type: VARCHAR
 
       - name: agent
