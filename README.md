@@ -1,6 +1,12 @@
 # wheres-carmen-trademe  
 **Skill Assessment: dbt Analytics Engineer for TradeMe**
 
+<table>
+  <tr>
+    <td> <img src="https://www.mobygames.com/images/covers/l/32898-where-in-the-world-is-carmen-sandiego-deluxe-edition-dos-front-cover.jpg" alt="WIWICSD" width=150px/></td>
+  </tr>
+</table>
+
 This document provides an overview of the dbt models used to analyze sightings data of Ms. Carmen Sandiego. The analysis focuses on monthly trends, behaviors, and sightings patterns based on the fact and dimension tables in the `mart` schema.
 
 ---
