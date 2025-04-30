@@ -53,3 +53,7 @@ models:
     description: Short description of perpetrator behavior
     tests:
     - not_null
+  - name: region
+    description: Agency region name
+    tests:
+    - not_null

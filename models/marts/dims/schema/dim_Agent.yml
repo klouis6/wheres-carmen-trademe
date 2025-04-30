@@ -1,0 +1,21 @@
+version: 2
+models:
+  - name: dim_Agent
+    description: Information regarding field agent whose filling the report
+
+    columns:
+      - name: agent_id
+        description: ID for field agent
+        data_type: VARCHAR
+
+      - name: agent
+        description: Name of field agent filing the report
+        data_type: VARCHAR
+        
+      - name: city_agent
+        description: HQ city where field agent files the report
+        data_type: VARCHAR
+
+      - name: region
+        description: Agency region name
+        data_type: VARCHAR

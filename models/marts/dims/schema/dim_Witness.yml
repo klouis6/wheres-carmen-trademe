@@ -1,0 +1,13 @@
+version: 2
+models:
+  - name: dim_Witness
+    description: Information regarding witness sighting
+
+    columns:
+      - name: witness_id
+        description: ID for witness sighting
+        data_type: VARCHAR
+        
+      - name: witness
+        description: Name of witness sighting the perpetrator
+        data_type: VARCHAR

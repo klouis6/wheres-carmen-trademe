@@ -1,0 +1,13 @@
+version: 2
+models:
+  - name: dim_Behavior
+    description: Information regarding perpetrator behavior during the sighting
+
+    columns:
+      - name: behavior_id
+        description: ID of unique behavior
+        data_type: VARCHAR
+        
+      - name: behavior
+        description: Short description of perpetrator behavior
+        data_type: VARCHAR

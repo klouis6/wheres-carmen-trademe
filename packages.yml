@@ -13,4 +13,7 @@ packages:
   
   - package: dbt-labs/dbt_project_evaluator
     version: 1.0.0
+
+  - package: calogica/dbt_date
+    version: 0.10.1
   

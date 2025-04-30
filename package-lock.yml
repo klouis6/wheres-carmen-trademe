@@ -14,4 +14,7 @@ packages:
   - name: dbt_project_evaluator
     package: dbt-labs/dbt_project_evaluator
     version: 1.0.0
-sha1_hash: 1829e285a8cd2822c6e09b8118388a6059d79286
+  - name: dbt_date
+    package: calogica/dbt_date
+    version: 0.10.1
+sha1_hash: 70fb9055e5c4ad8435d473d413c1d0e49dfdb2c1

@@ -1,0 +1,26 @@
+version: 2
+models:
+  - name: dim_Location
+    description: Geographical information regarding the location of sighting
+
+    columns:
+      - name: location_id
+        description: ID for location
+        data_type: VARCHAR
+        
+      - name: country
+        description: Country of sighting
+        data_type: VARCHAR
+        
+      - name: city
+        description: City of sighting
+        data_type: VARCHAR
+
+      - name: latitude
+        description: Latitude of sighting
+        data_type: FLOAT
+
+      - name: longitude
+        description: Longitude of sighting
+        data_type: FLOAT
+          

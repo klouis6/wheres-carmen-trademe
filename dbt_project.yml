@@ -44,14 +44,14 @@ models:
       dims:
         +tags: "dims"
         +database: "WHERES_CARMEN_DB"
-        +materialized: view
+        +materialized: table
         +transient: false
         +schema: mart
 
       facts:
         +tags: "facts"
         +database: "WHERES_CARMEN_DB"
-        +materialized: view
+        +materialized: table
         +transient: false
         +schema: mart
 
