@@ -18,4 +18,3 @@ LEFT JOIN {{ ref('dim_Location') }} as locaction_dim
     AND base.longitude = locaction_dim.longitude
 LEFT JOIN {{ ref('dim_Date') }} as date_witness_dim ON base.date_witness = date_witness_dim.date_day
 LEFT JOIN {{ ref('dim_Date') }} as date_agent_dim ON base.date_agent = date_agent_dim.date_day
-ORDER BY sighting_id

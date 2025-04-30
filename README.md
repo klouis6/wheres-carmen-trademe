@@ -1,6 +1,8 @@
 # wheres-carmen-trademe  
 **Skill Assessment: dbt Analytics Engineer for TradeMe**
 
+**Candidate: Teodosius Kenneth Louis Mariono**
+
 <table>
   <tr>
     <td> <img src="https://www.mobygames.com/images/covers/l/32898-where-in-the-world-is-carmen-sandiego-deluxe-edition-dos-front-cover.jpg" alt="WIWICSD" width=150px/></td>
@@ -28,7 +30,7 @@ For each month, which agency region is Carmen Sandiego most likely to be found?
 **Logic / Approach:**  
 To determine the most likely region where Carmen is sighted each month:
 1. We join the `fact_Sighting` model with `dim_Date` to get the month of each sighting.
-2. We join with `dim_Agent` to obtain the agent's region.
+2. We join with `dim_Agent` to get the agent's region.
 3. We count the number of sightings per region for each month.
 4. We use a `ROW_NUMBER()` window function to select only the top region with the highest count per month.
 
@@ -38,18 +40,17 @@ This ensures that for each month, we return only one region — the one with the
 
 **SQL:**
 ```sql
-select 
+select
     dd.month as month_of_year,
     da.region as top_agency_region,
     count(*) as no_of_sightings
-from {{ ref('fact_Sighting') }} as fs
-left join {{ ref('dim_Date') }} as dd
+from {{ ref("fact_Sighting") }} as fs
+left join {{ ref("dim_Date") }} as dd 
     on fs.date_witness = dd.date_day
-left join {{ ref('dim_Agent') }} as da
+left join {{ ref("dim_Agent") }} as da 
     on fs.agent_id = da.agent_id
 group by dd.month, da.region
 qualify row_number() over (partition by dd.month order by count(*) desc) = 1
-order by dd.month
 ```
 
 ---
@@ -63,11 +64,13 @@ Also for each month, what is the probability that Ms. Sandiego is armed AND wear
 To calculate this monthly probability:
 1. We start from the `fact_Sighting` table and join it with `dim_Date` to get the month.
 2. We apply a `COUNT_IF` condition to count only the sightings where Carmen:
-   - Is armed (`has_weapon = true`)
-   - Is wearing a jacket (`has_jacket = true`)
-   - Is **not** wearing a hat (`has_hat = false`)
+   - Is armed (`has_weapon`)
+   - Is wearing a jacket (`has_jacket`)
+   - Is **not** wearing a hat (`not has_hat`)
 3. We divide the conditional count by the total count for that month to get the probability.
-4. The result is presented both as a decimal (0–1) and as a percentage (0–100%).
+
+**General Observations:**
+Ms. Sandiego seems more likely to be armed, wearing a jacket, and not wearing a hat during spring and summer months, especially in March, June, and August. She is least likely to be observed in this attire during November and early spring, possibly indicating behavioral or disguise changes with the seasons.
 
 **Model:** [probability_armed_jacket_no_hat.sql](models/marts/views/probability_armed_jacket_no_hat.sql)
 
@@ -76,18 +79,13 @@ To calculate this monthly probability:
 select
     dd.month as month_of_year,
     round(
-        count_if(fs.has_weapon = true and fs.has_jacket = true and fs.has_hat = false) 
+        count_if(fs.has_weapon and fs.has_jacket and not fs.has_hat) 
         / count(*)::float, 4
-    ) as probability_armed_jacket_no_hat,
-    round(
-        count_if(fs.has_weapon = true and fs.has_jacket = true and fs.has_hat = false) 
-        / count(*)::float * 100, 2
-    ) as perc_probability_armed_jacket_no_hat
+    ) as probability_armed_jacket_no_hat
 from {{ ref('fact_Sighting') }} fs
 left join {{ ref('dim_Date') }} dd
     on fs.date_witness = dd.date_day
 group by dd.month
-order by dd.month
 ```
 
 ---
@@ -117,7 +115,6 @@ left join {{ ref('dim_Behavior') }} db
     on fs.behavior_id = db.behavior_id
 group by fs.behavior_id, db.behavior
 qualify row_number() over (order by count(*) desc) <= 3
-order by count_behavior desc
 ```
 
 ---
@@ -132,7 +129,6 @@ To identify her most common behaviors:
 1. We start from getting the top 3 occuring behaviors from 'top_3_behaviors' model.
 2. We apply a `COUNT_IF` condition to count only the behaviors where exist in 'top_3_behaviors' model.
 3. We divide the conditional count by the total count for that month to get the probability.
-4. The result is presented both as a decimal (0–1) and as a percentage (0–100%).
 
 **Model:** [probability_top3_behaviors_by_month.sql](models/marts/views/probability_top3_behaviors_by_month.sql)
 
@@ -148,18 +144,13 @@ select
     round(
         count_if(fs.behavior_id in (select behavior_id from top_behavior)) 
         / count(*)::float, 4
-    ) as probability_top3_behaviors,
-    round(
-        count_if(fs.behavior_id in (select behavior_id from top_behavior)) 
-        / count(*)::float * 100, 2
-    ) as perc_probability_top3_behaviors
+    ) as probability_top3_behaviors
 from {{ ref('fact_Sighting') }} fs
 left join {{ ref('dim_Date') }} dd
     on fs.date_witness = dd.date_day
 left join top_behavior tb
     on fs.behavior_id = tb.behavior_id
 group by dd.month
-order by dd.month
 ```
 
 ---
