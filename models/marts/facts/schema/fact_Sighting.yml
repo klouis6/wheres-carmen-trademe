@@ -1,0 +1,45 @@
+version: 2
+models:
+  - name: fact_Sighting
+    description: Fact table consists of detail information of the sighting
+
+    columns:
+      - name: sighting_id
+        description: ID for unique sighting
+        data_type: VARCHAR
+
+      - name: agent_id
+        description: ID for unique field agent
+        data_type: VARCHAR
+        
+      - name: date_agent
+        description: Date of field agent filing the report
+        data_type: DATE
+
+      - name: location_id
+        description: ID for unique sighting location
+        data_type: VARCHAR
+
+      - name: witness_id
+        description: ID for unique witness
+        data_type: VARCHAR
+
+      - name: date_witness
+        description: Date of witness sighting
+        data_type: DATE
+
+      - name: behavior_id
+        description: ID of unique behavior
+        data_type: VARCHAR
+
+      - name: has_weapon
+        description: Was the perpetrator observed to be armed?
+        data_type: BOOLEAN
+
+      - name: has_hat
+        description: Was the perpetrator wearing a hat?
+        data_type: BOOLEAN
+
+      - name: has_jacket
+        description: Was the perpetrator wearing a jacket?
+        data_type: BOOLEAN

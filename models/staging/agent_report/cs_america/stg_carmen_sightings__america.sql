@@ -1,0 +1,1 @@
+{{ get_carmen_sightings('carmen_sighting', 'seed_carmen_sightings__america') }}

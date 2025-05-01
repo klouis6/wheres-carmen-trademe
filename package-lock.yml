@@ -1,0 +1,20 @@
+packages:
+  - name: dbt_utils
+    package: dbt-labs/dbt_utils
+    version: 1.3.0
+  - name: codegen
+    package: dbt-labs/codegen
+    version: 0.13.1
+  - name: elementary
+    package: elementary-data/elementary
+    version: 0.18.1
+  - name: audit_helper
+    package: dbt-labs/audit_helper
+    version: 0.12.1
+  - name: dbt_project_evaluator
+    package: dbt-labs/dbt_project_evaluator
+    version: 1.0.0
+  - name: dbt_date
+    package: calogica/dbt_date
+    version: 0.10.1
+sha1_hash: 70fb9055e5c4ad8435d473d413c1d0e49dfdb2c1

@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: most_likely_region_by_month
+    description: Identifies which agency region Carmen was most frequently seen in each month
+    columns:
+      - name: month_of_year
+        description: The month of the sighting
+      - name: top_agency_region
+        description: The agency region where Carmen was most often seen
+      - name: no_of_sightings
+        description: The number of sightings in this region for the given month
+
+  - name: probability_armed_jacket_no_hat
+    description: Calculates the monthly probability that Carmen is armed, wearing a jacket, and without a hat
+    columns:
+      - name: month_of_year
+        description: The month for the probability calculation
+      - name: probability_armed_jacket_no_hat
+        description: The probability that Carmen is armed, wearing a jacket, but not wearing a hat
+
+  - name: top_3_behaviors
+    description: The three most frequent behaviors observed in Carmen's sightings
+    columns:
+      - name: behavior_id
+        description: ID of unique behavior
+      - name: behavior
+        description: The behavior observed
+      - name: count_behavior
+        description: The count of sightings where this behavior was observed
+
+  - name: probability_top3_behaviors_by_month
+    description: Calculates the monthly likelihood that Carmen exhibits one of her top 3 behaviors
+    columns:
+      - name: month_of_year
+        description: The month of the behavior probability
+      - name: probability_top3_behaviors
+        description: The probability that Carmen exhibits one of her top 3 behaviors

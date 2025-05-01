@@ -1,0 +1,68 @@
+name: 'wheres_carmen'
+version: '1.0.0'
+config-version: 2
+
+profile: 'default'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+
+models:
+  elementary:
+    +tags: "Elementary"
+    +database: "WHERES_CARMEN_DB"
+    +schema: Elementary
+
+  wheres_carmen:
+    +persist_docs:
+      relation: true
+      columns: true
+
+    staging:
+      +tags: "staging"
+      +database: "WHERES_CARMEN_DB"
+      +materialized: view
+      +schema: src
+
+    intermediate:
+      +tags: "intermediate"
+      +database: "WHERES_CARMEN_DB"
+      +materialized: table
+      +schema: int
+
+    marts:
+      dims:
+        +tags: "dims"
+        +database: "WHERES_CARMEN_DB"
+        +materialized: table
+        +transient: false
+        +schema: mart
+
+      facts:
+        +tags: "facts"
+        +database: "WHERES_CARMEN_DB"
+        +materialized: table
+        +transient: false
+        +schema: mart
+
+      views:
+        +tags: "views"
+        +database: "WHERES_CARMEN_DB"
+        +materialized: view
+        +schema: mart
+
+seeds:
+  +tags: "seeds"
+  +database: "WHERES_CARMEN_DB"
+  +materialized: seed
+  +schema: seed
